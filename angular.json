@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "homebase4:build:production"
+              "buildTarget": "homebase4:build:production"
             },
             "development": {
-              "browserTarget": "homebase4:build:development"
+              "buildTarget": "homebase4:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "homebase4:build"
+            "buildTarget": "homebase4:build"
           }
         },
         "test": {

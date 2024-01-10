@@ -14,9 +14,7 @@ import { CdkDrag, CdkDropList, CdkDragDrop, moveItemInArray, transferArrayItem, 
 
 })
 export class AppComponent {
-drop($event: CdkDragDrop<string[],any,any>) {
-throw new Error('Method not implemented.');
-}
+
 
 items:Item[]=[];
 it: string[]=[]
@@ -35,4 +33,15 @@ done:string[] = [
     
   }
   title = 'homebase4';
+  
+  drop(event: CdkDragDrop<string[]>): void {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+          event.container.data,
+          event.previousIndex,
+          event.currentIndex);
+    }
+  }
 }
