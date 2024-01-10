@@ -13,20 +13,20 @@ export class TodoService {
 
   constructor(private http:HttpClient) {  }
 
-getAllTodoItems(): Observable<Item[]>{
-  var url= baseUrl + "/items";
-  return this.http.get<Item[]>(url)
-}
-getTodoItem(item:Item): Observable<Item>{
-  var url= baseUrl + "items/" + item.item;
-  return this.http.get<Item>(url)
-}
-deleteTodoItem(item:Item): Observable<Item[]>{
-  var url= baseUrl + "items/" + item.item;
-  return this.http.delete<Item[]>(url)
-}
-putTodoItem(item:Item): Observable<Item>{
-  var url= baseUrl + "items/" + item;
-  return this.http.get<Item>(url)
-}
+  getAllTodoItems(): Observable<Item[]>{
+    var url= baseUrl + "/items";
+    return this.http.get<Item[]>(url)
+  }
+  getTodoItem(item:Item): Observable<Item>{
+    var url= baseUrl + "/items/" + item.item;
+    return this.http.get<Item>(url)
+  }
+  deleteTodoItem(item:Item): Observable<Item[]>{
+    var url= baseUrl + "/items/" + item.item;
+    return this.http.delete<Item[]>(url)
+  }
+  putTodoItem(item:Item): Observable<Item>{
+    var url= baseUrl + "/items/" + item;
+    return this.http.get<Item>(url)
+  }
 }

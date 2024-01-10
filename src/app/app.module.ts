@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
